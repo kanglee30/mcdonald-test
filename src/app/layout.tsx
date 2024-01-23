@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// import { Provider } from "react-redux";
+
 import "./globals.css";
+import NavBarWrapper from "@/components/NavBarWrapper";
+
+import StyledComponentsRegistry from "@/lib/registry";
+
+import { DataProvider } from "@/context/burgerData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // <DataProvider>
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
+          <NavBarWrapper />
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
+    // </DataProvider>
   );
 }
