@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 First, run the development server - JSON SERVER:
+JSON Server is being used to manage the App's current cart DB
 
 ```bash
 npm run server
