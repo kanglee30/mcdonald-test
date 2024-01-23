@@ -23,6 +23,14 @@ const BurgetListWrapper = styled.section`
     color: white;
     padding-bottom: 35px;
   }
+  h2 {
+    text-align: center;
+    color: white;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 `;
 
 export default function BurgerList({ burgersCart }: BurgerCartListProps) {
